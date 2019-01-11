@@ -101,11 +101,11 @@ function updateData() {
 	force.start(); }
 
 function updateStyle(d) {
-	  return color(d.site % 10);	
+	  return color(d.group % 10);	
 }
 
 function updateType(d) {
-	return d3.svg.symbolTypes[d.site/10>>0];
+	return d3.svg.symbolTypes[d.group/10>>0];
 }
 	
 </script>
