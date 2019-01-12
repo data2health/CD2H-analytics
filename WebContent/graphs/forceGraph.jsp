@@ -74,8 +74,10 @@ d3.select(window).on('resize', function() {
             .size(function(d) {return rScale(d.score);})
         .type(function(d) { return d3.svg.symbolTypes[d.group/10>>0]; }))
     .style("fill", function(d) { return color(d.group % 10); })
-		.on("dblclick", function(d) { window.open(d.url,"_self");})
-       .call(force.drag);
+	.on("dblclick", function(d) { window.open(d.url,"_self");})
+    .on("mouseover", fade(.2))
+    .on("mouseout", fade(1))
+    .call(force.drag);
 
   node.append("title")
       .text(function(d) { return d.name; });
@@ -92,6 +94,29 @@ d3.select(window).on('resize', function() {
 	        .type(function(d) { return updateType(d); }))
 		.style("fill", function(d) {return updateStyle(d);});
   });
+
+  var linkedByIndex = {};
+  graph.links.forEach(function(d) {
+      linkedByIndex[d.source.index + "," + d.target.index] = 1;
+  });
+
+  function isConnected(a, b) {
+      return linkedByIndex[a.index + "," + b.index] || linkedByIndex[b.index + "," + a.index] || a.index == b.index;
+  }
+
+  function fade(opacity) {
+      return function(d) {
+          node.style("stroke-opacity", function(o) {
+              thisOpacity = isConnected(d, o) ? 1 : opacity;
+              this.setAttribute('fill-opacity', thisOpacity);
+              return thisOpacity;
+          });
+
+          link.style("stroke-opacity", function(o) {
+              return o.source === d || o.target === d ? 1 : opacity;
+          });
+      };
+  }
 });
 
 function updateData() {
@@ -107,5 +132,6 @@ function updateStyle(d) {
 function updateType(d) {
 	return d3.svg.symbolTypes[d.group/10>>0];
 }
-	
+
+
 </script>
