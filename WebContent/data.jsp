@@ -40,17 +40,17 @@
     </c:forEach>
 
     <sql:query var="edges" dataSource="jdbc/VIVOTagLib">
-        select url,pid from cd2h_phase2.member natural join cd2h_phase2.proposal where url is not null and pid not in (select pid from cd2h_phase2.lead);
+        select url,pid from cd2h_phase2.lead natural join cd2h_phase2.proposal where url is not null;
     </sql:query>
     <c:forEach items="${edges.rows}" var="row" varStatus="rowCounter">
-        <graph:edge source="${row.url}" target="person${row.pid}"  weight="0.01" />
+        <graph:edge source="${row.url}" target="person${row.pid}"  weight="0.2" />
     </c:forEach>
 
     <sql:query var="edges" dataSource="jdbc/VIVOTagLib">
-        select url,pid from cd2h_phase2.member natural join cd2h_phase2.proposal where url is not null and pid in (select pid from cd2h_phase2.lead);
+        select url,pid from cd2h_phase2.member natural join cd2h_phase2.proposal where url is not null and (id,pid) not in (select id,pid from cd2h_phase2.lead);
     </sql:query>
     <c:forEach items="${edges.rows}" var="row" varStatus="rowCounter">
-        <graph:edge source="${row.url}" target="person${row.pid}"  weight="0.1" />
+        <graph:edge source="${row.url}" target="person${row.pid}"  weight="0.01" />
     </c:forEach>
 
 	{
