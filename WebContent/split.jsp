@@ -3,7 +3,7 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
-<sql:update dataSource="jdbc/VIVOTagLib">
+<sql:update dataSource="jdbc/loki">
 	delete from cd2h_phase2.merge where target = ?::int and merged = ?::int
 	<sql:param>${param.target}</sql:param>
 	<sql:param>${param.merged}</sql:param>

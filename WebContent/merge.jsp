@@ -3,7 +3,7 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
-<sql:update dataSource="jdbc/VIVOTagLib">
+<sql:update dataSource="jdbc/loki">
 	insert into cd2h_phase2.merge(target,merged) values(?::int,?::int)
 	<sql:param>${param.target}</sql:param>
 	<sql:param>${param.merged}</sql:param>

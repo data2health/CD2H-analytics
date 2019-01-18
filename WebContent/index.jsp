@@ -3,6 +3,7 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%@ taglib prefix="util" uri="http://icts.uiowa.edu/tagUtil"%>
 
+
 <!DOCTYPE html>
 <html lang="en-US">
 <jsp:include page="head.jsp" flush="true">
@@ -20,7 +21,7 @@
 		<div class="container-fluid">
 
 			<h2>CD2H Phase 2 Landscape</h2>
-			<p><a href="mergers.jsp">Manage mergers</a></p>
+			<p><a href="<util:applicationRoot/>/mergers.jsp">Manage mergers</a></p>
 			<ul>
 				<li>Large orange nodes are projects - mousing over shows the title and elevator pitch, double-clicking on them takes you to the proposal
 				<li>Red dots are proposal leads - no additional functionality beyond mousing over to see a name

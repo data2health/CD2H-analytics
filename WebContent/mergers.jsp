@@ -26,7 +26,7 @@
 					</table>
 				</form>
 			<hr/>
-			<sql:query var="proposals" dataSource="jdbc/VIVOTagLib">
+			<sql:query var="proposals" dataSource="jdbc/loki">
 				select id,title,url,regexp_replace(pitch, E'[\\n\\r]+', ' ', 'g' ) as pitch from cd2h_phase2.proposal where url is not null and title!~'Disambiguation' and id not in (select merged from cd2h_phase2.merge) order by id;
 			</sql:query>
 			<dl>
@@ -35,7 +35,7 @@
 						[${row.id}] : ${row.title }
 					</dt>
 					<dd>${row.pitch}
-					<sql:query var="mergers" dataSource="jdbc/VIVOTagLib">
+					<sql:query var="mergers" dataSource="jdbc/loki">
 						select id,title,url,regexp_replace(pitch, E'[\\n\\r]+', ' ', 'g' ) as pitch from cd2h_phase2.proposal where url is not null and title!~'Disambiguation' and id in (select merged from cd2h_phase2.merge where target = ?::int) order by id;
 						<sql:param>${row.id}</sql:param>
 					</sql:query>
