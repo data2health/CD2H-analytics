@@ -1,6 +1,7 @@
+<%@ taglib prefix="util" uri="http://icts.uiowa.edu/tagUtil"%>
 
 <div class="container pl-0 pr-0">
-	<img alt="CD2H honeycomb" src="images/cd2h_honeycomb.png" width="50%"
+	<img alt="CD2H honeycomb" src="<util:applicationRoot/>/images/cd2h_honeycomb.png" width="50%"
 		align=left>
 	<div id="header-logos"
 		class="row no-gutters align-items-center justify-content-center pt-3 pt-md-0 mt-2 mt-md-3 mb-4">
@@ -31,4 +32,5 @@
 			</a>
 		</div>
 	</div>
+	<a href="<util:applicationRoot/>">Analytics Home</a>
 </div>

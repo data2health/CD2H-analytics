@@ -141,6 +141,20 @@ a:hover {
     padding:20px 0px 0px 0px;
 }
 
+#contentBlock {
+    height: 100%;
+	width: 100%;
+    float: left;
+    padding: 0px 10px 0px 0px;
+}
+
+#contentBlock2 {
+    height: 100%;
+    width: 50%;
+    float: left;
+    padding: 0px 10px 0px 0px;
+}
+
 /************************/
 /* Multipurpose Classes */
 /************************/
@@ -154,12 +168,24 @@ a:hover {
 }
 /* Table */
 
-table {
+table,th,td {
+border-collapse: collapse;
+border: 1px solid black;
+padding: 5px;
+}
+
+table caption {
+	font-size: 1.5em;
+	line-height: 1.5em;
+    caption-side: top;
+    text-align: center;
+    color: #000000;
 }
 
 table th {
-	font-size: .95em;
-	line-height: 1.5em;
+    font-size: .95em;
+    line-height: 1.5em;
+    background-color: #eeeeee;
 }
 table td {
 	font-size: .95em;

@@ -5,22 +5,22 @@
 
 <!DOCTYPE html>
 <html lang="en-US">
-<jsp:include page="head.jsp" flush="true">
+<jsp:include page="../head.jsp" flush="true">
 	<jsp:param name="title" value="CD2H Phase 2 Landscape" />
 </jsp:include>
 <style type="text/css" media="all">
-@import "resources/layout.css";
+@import "../resources/layout.css";
 </style>
 
 <body class="home page-template-default page page-id-6 CD2H">
-	<jsp:include page="header.jsp" flush="true" />
+	<jsp:include page="../header.jsp" flush="true" />
 
 	<div class="container pl-0 pr-0">
 		<br /> <br /> <br /> <br /> <br />
 		<div class="container-fluid">
 
 			<h2>Proposal Mergers</h2>
-			<p><a href="index.jsp">Visualize the proposal landscape</a></p>
+			<p><a href="display.jsp">Visualize the proposal landscape</a></p>
 				<form method='POST' action='merge.jsp'>
 					Merge: target ID : <input name="target" value="${param.target}" size=5> merged ID :	<input name="merged" value="${param.merged}" size=5> <input	type=submit name=submitButton value=submit>
 					</table>
@@ -48,7 +48,7 @@
 				</c:forEach>
 			</dl>
 		</div>
-		<jsp:include page="footer.jsp" flush="true" />
+		<jsp:include page="../footer.jsp" flush="true" />
 </body>
 
 </html>

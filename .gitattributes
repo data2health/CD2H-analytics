@@ -11,9 +11,9 @@
 .settings/org.eclipse.wst.validation.prefs -text
 WebContent/META-INF/MANIFEST.MF -text
 WebContent/WEB-INF/web.xml -text svneol=unset#application/xml
-WebContent/data.jsp -text
 WebContent/footer.jsp -text
 WebContent/graphs/forceGraph.jsp -text
+WebContent/graphs/verticalBarChart.jsp -text
 WebContent/head.jsp -text
 WebContent/header.jsp -text
 WebContent/images/bullet-l1.gif -text svneol=unset#image/gif
@@ -23,9 +23,14 @@ WebContent/images/masthead-divider.png -text svneol=unset#image/png
 WebContent/images/masthead-hhs-logo.png -text svneol=unset#image/png
 WebContent/images/masthead-nih-logo.png -text svneol=unset#image/png
 WebContent/images/onlinelogomaker-111617-1142-7717.png -text svneol=unset#image/png
+WebContent/incite/browse.jsp -text
+WebContent/incite/termData.jsp -text
 WebContent/index.jsp -text
-WebContent/merge.jsp -text
-WebContent/mergers.jsp -text
+WebContent/proposals/data.jsp -text
+WebContent/proposals/display.jsp -text
+WebContent/proposals/merge.jsp -text
+WebContent/proposals/mergers.jsp -text
+WebContent/proposals/split.jsp -text
 WebContent/resources/cd2h -text
 WebContent/resources/css -text
 WebContent/resources/d3.v3.min.js -text
@@ -34,5 +39,4 @@ WebContent/resources/layout.css -text
 WebContent/resources/slick.min.css -text
 WebContent/resources/style.css -text
 WebContent/resources/styles.css -text
-WebContent/split.jsp -text
 /pom.xml -text
