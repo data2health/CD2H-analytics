@@ -19,6 +19,31 @@ WebContent/head.jsp -text
 WebContent/header.jsp -text
 WebContent/images/bullet-l1.gif -text svneol=unset#image/gif
 WebContent/images/cd2h_honeycomb.png -text svneol=unset#image/png
+WebContent/images/cd2h_imgs/adam_wilcox.png -text
+WebContent/images/cd2h_imgs/bill_hersh.png -text
+WebContent/images/cd2h_imgs/christopher_chute.png -text
+WebContent/images/cd2h_imgs/chunlei_wu.png -text
+WebContent/images/cd2h_imgs/david_dorr.png -text
+WebContent/images/cd2h_imgs/david_eichmann.png -text
+WebContent/images/cd2h_imgs/eilis_boudreau.png -text
+WebContent/images/cd2h_imgs/firas_wehbe.png -text
+WebContent/images/cd2h_imgs/john_wilbanks.png -text
+WebContent/images/cd2h_imgs/justin_guinney.png -text
+WebContent/images/cd2h_imgs/kari_stephens.png -text
+WebContent/images/cd2h_imgs/keith_herzog.png -text
+WebContent/images/cd2h_imgs/kristi_holmes.png -text
+WebContent/images/cd2h_imgs/liz_zampino.png -text
+WebContent/images/cd2h_imgs/matt_carson.png -text
+WebContent/images/cd2h_imgs/melissa_haendel.png -text
+WebContent/images/cd2h_imgs/nic_dobbins.png -text
+WebContent/images/cd2h_imgs/peter_robinson.png -text
+WebContent/images/cd2h_imgs/philip_payne.png -text
+WebContent/images/cd2h_imgs/robert_schuff.png -text
+WebContent/images/cd2h_imgs/robin_champieux.png -text
+WebContent/images/cd2h_imgs/sara_gonzales.png -text
+WebContent/images/cd2h_imgs/shannon_mcweeney.png -text
+WebContent/images/cd2h_imgs/ted_laderas.png -text
+WebContent/images/cd2h_imgs/tim_bergquist.png -text
 WebContent/images/cd2h_invent.png -text
 WebContent/images/ctsa-g-logo.jpg -text svneol=unset#image/jpeg
 WebContent/images/masthead-divider.png -text svneol=unset#image/png
