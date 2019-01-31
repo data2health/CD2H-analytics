@@ -19,6 +19,7 @@ WebContent/head.jsp -text
 WebContent/header.jsp -text
 WebContent/images/bullet-l1.gif -text svneol=unset#image/gif
 WebContent/images/cd2h_honeycomb.png -text svneol=unset#image/png
+WebContent/images/cd2h_invent.png -text
 WebContent/images/ctsa-g-logo.jpg -text svneol=unset#image/jpeg
 WebContent/images/masthead-divider.png -text svneol=unset#image/png
 WebContent/images/masthead-hhs-logo.png -text svneol=unset#image/png
