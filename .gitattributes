@@ -13,6 +13,7 @@ WebContent/META-INF/MANIFEST.MF -text
 WebContent/WEB-INF/web.xml -text svneol=unset#application/xml
 WebContent/footer.jsp -text
 WebContent/graphs/forceGraph.jsp -text
+WebContent/graphs/forcePhoto.jsp -text
 WebContent/graphs/verticalBarChart.jsp -text
 WebContent/head.jsp -text
 WebContent/header.jsp -text
