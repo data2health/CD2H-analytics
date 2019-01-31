@@ -22,21 +22,21 @@
 	    	<c:set var="title" value="${title} / ${subrow.title}"/>
 	    	<c:set var="pitch" value="${pitch} / ${subrow.pitch}"/>
 	    </c:forEach>
-        <graph:node uri="${row.url}" label="${title} -- ${pitch}" group="1" score="1"/>
+        <graph:node uri="${row.url}" label="${title} -- ${pitch}" group="1" score="1" auxString="../images/cd2h_invent.png"/>
     </c:forEach>
 		
     <sql:query var="persons" dataSource="jdbc/loki" >
         select id,first||' '||last as name from cd2h_phase2.person where id not in (select pid from cd2h_phase2.lead) and id in (select pid from cd2h_phase2.member) order by id;
     </sql:query>
     <c:forEach items="${persons.rows}" var="row">
-        <graph:node uri="person${row.id}" label="${row.name}" group="2" score="0.1"/>
+        <graph:node uri="person${row.id}" label="${row.name}" group="2" score="0.1" auxString="../images/person_icon.png"/>
     </c:forEach>
 
     <sql:query var="persons" dataSource="jdbc/loki" >
-        select id,first||' '||last as name from cd2h_phase2.person where id in (select pid from cd2h_phase2.lead) and id in (select pid from cd2h_phase2.member) order by id;
+        select id,first||' '||last as name, '../images/cd2h_imgs/'||lower(first)||'_'||lower(last)||'.png' as file from cd2h_phase2.person where id in (select pid from cd2h_phase2.lead) and id in (select pid from cd2h_phase2.member) order by id;
     </sql:query>
     <c:forEach items="${persons.rows}" var="row">
-        <graph:node uri="person${row.id}" label="${row.name}" group="3" score="0.5"/>
+        <graph:node uri="person${row.id}" label="${row.name}" group="3" score="0.5" auxString="${row.file}"/>
     </c:forEach>
 
     <sql:query var="edges" dataSource="jdbc/loki">
@@ -57,7 +57,7 @@
 	  "nodes":[
 		<graph:foreachNode > 
 			<graph:node>
-			    {"url":"<graph:nodeUri/>","name":"<graph:nodeLabel/>","group":<graph:nodeGroup/>,"score":<graph:nodeScore/>}<c:if test="${ ! isLastNode }">,</c:if>
+			    {"url":"<graph:nodeUri/>","image_link":"<graph:nodeAuxString/>","name":"<graph:nodeLabel/>","group":<graph:nodeGroup/>,"score":<graph:nodeScore/>}<c:if test="${ ! isLastNode }">,</c:if>
 			</graph:node>
 		</graph:foreachNode>
 		],
