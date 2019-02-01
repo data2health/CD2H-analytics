@@ -19,9 +19,8 @@
 	<div class="container pl-0 pr-0">
 		<br /> <br /> 
 		<div class="container-fluid">
-
+<br>
 			<h2>CD2H Phase 2 Landscape</h2>
-			<p><a href="<util:applicationRoot/>/proposals/mergers.jsp">Manage mergers</a></p>
 			<ul>
 				<li>Large blue icons are projects - mousing over shows the title and elevator pitch, double-clicking on them takes you to the proposal
 				<li>Photos are proposal leads - mouse over to see a name
