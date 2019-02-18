@@ -22,10 +22,11 @@
 
 			<h1>CD2H Analytics</h1>
 			<hr>
-			<h3><a href="proposals/display.jsp">Explore CD2H Phase 2 Proposals</a></h3>
-			<p></p>
-            <h3><a href="incite/browse.jsp">Explore CTSA Hub Website Content</a></h3>
-            <p></p>
+			<ol class="bulletedList">
+			<li><a href="github/repos.jsp?mode=org">Explore CD2H GitHub Organization</a>
+            <li><a href="proposals/display.jsp">Explore CD2H Phase 2 Proposals</a>
+            <li><a href="incite/browse.jsp">Explore CTSA Hub Website Content</a>
+            </ol>
 		</div>
 		<jsp:include page="footer.jsp" flush="true" />
 </body>
