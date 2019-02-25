@@ -22,18 +22,23 @@
 		<div class="container-fluid">
 			<br>
 			<div style="width: 100%; float: left">
-				<h1>CD2H GitHub Repositories</h1>
-				<p>
-					These are repositories flagged with "data2health" as a topic. (<a
-						href="repos.jsp?mode=org">switch to organization view</a>)
-				</p>
 				<json:setAPI API="CD2H">
 					<json:object queryName="project" parameter="proj:${param.id}" targetName="projectById">
-                        <h2><json:data label="title"></json:data></h2>
-                        <p><json:data label="description"></json:data></p>
-                        <p><b>Vertical: </b><json:data label="vertical"></json:data></p>
-                        <p><b>Thematic Area: </b><json:data label="thematicArea"></json:data></p>
-                        <p><b>GitHub: </b><json:data label="github"></json:data></p>
+                        <h1><json:data label="title"/></h1>
+                        <p><json:data label="description"/></p>
+                        <p><b>Vertical: </b><json:data label="vertical"/></p>
+                        <p><b>Thematic Area: </b><json:data label="thematicArea"/></p>
+                        <p><b>GitHub: </b><a href="<json:data label="github"/>"><json:data label="github"/></a></p>
+                        <p><b>Project Lead(s)</b>
+                        <json:object targetName="rolesById">
+                        <ol class="bulletedList">
+                        <json:array label="nodes">
+                            <json:object targetName="personByEmailAddress">
+                                <li><json:data label="preferredFirstName"/> <json:data label="lastName"/>
+                            </json:object>
+                        </json:array>
+                        </ol>
+                        </json:object>
 					</json:object>
 				</json:setAPI>
 			</div>
