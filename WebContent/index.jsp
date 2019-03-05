@@ -23,7 +23,8 @@
 			<h1>CD2H Analytics</h1>
 			<hr>
 			<ol class="bulletedList">
-			<li><a href="cd2h/projects.jsp?mode=org">Explore Current CD2H Projects</a>
+			<li><a href="cd2h/dashboard.jsp">CD2H Project Dashboard</a>
+            <li><a href="cd2h/projects.jsp?mode=org">Explore Current CD2H Projects</a>
             <li><a href="github/repos.jsp?mode=org">Explore CD2H GitHub Organization</a>
             <li><a href="proposals/display.jsp">Explore CD2H Phase 2 Proposals</a>
             <li><a href="incite/browse.jsp">Explore CTSA Hub Website Content</a>

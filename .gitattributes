@@ -11,12 +11,15 @@
 .settings/org.eclipse.wst.validation.prefs -text
 WebContent/META-INF/MANIFEST.MF -text
 WebContent/WEB-INF/web.xml -text svneol=unset#application/xml
+WebContent/cd2h/dashboard.jsp -text
 WebContent/cd2h/project.jsp -text
 WebContent/cd2h/projects.jsp -text
 WebContent/footer.jsp -text
 WebContent/github/repos.jsp -text
+WebContent/graphs/data.csv -text
 WebContent/graphs/forceGraph.jsp -text
 WebContent/graphs/forcePhoto.jsp -text
+WebContent/graphs/singleHorizontalStackedBar.jsp -text
 WebContent/graphs/verticalBarChart.jsp -text
 WebContent/head.jsp -text
 WebContent/header.jsp -text
