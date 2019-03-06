@@ -22,6 +22,7 @@
 
 			<h1>CD2H Analytics</h1>
 			<hr>
+			
 			<ol class="bulletedList">
 			<li><a href="cd2h/dashboard.jsp">CD2H Phase 2 Project Dashboard</a>
             <li><a href="cd2h/projects.jsp?mode=org">Explore Current CD2H Projects</a>
