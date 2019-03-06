@@ -23,11 +23,14 @@
 			<br>
 			<div style="width: 100%; float: left">
 				<h1>CD2H GitHub Dashboard</h1>
+				<p>Note that the progress bars below misbehave in macOs Chrome (and possibly others).</p>
+				<p>Current ordering is by decreasing order of last update of the project repository.</p>
 				<json:setAPI API="GitHub">
 					<json:object queryName="projectDashboard" targetName="organization">
 					   <json:object targetName="repositories">
+					   <c:set var="rowCount" value="${1}"/>
                         <table>
-                        <tr><th>Project</th><th>Description</th><th>Milestones</th><th>Issues</th></tr>
+                        <tr><th>Project</th><th>Description</th><th>Updated At</th><th>Milestones</th><th>Issues</th></tr>
 						<json:array label="nodes">
 						  <json:object>
 						      <c:set var="repo"><json:data label="name"/></c:set>
@@ -36,7 +39,9 @@
 							    <sql:param><json:data label="name"/></sql:param>
 							</sql:query>
 							<c:forEach items="${projects.rows}" var="row" varStatus="rowCounter">
-							    <tr><td><a href="<json:data label="url"/>"><json:data label="name"/></a></td><td><json:data label="description"/></td>
+							    <tr><td><a href="<json:data label="url"/>"><json:data label="name"/></a></td>
+							    <td><json:data label="description"/></td>
+                                <td><json:data label="pushedAt"/></td>
 							    <json:object targetName="milestones">
 							     <c:set var="completed" value="0"/>
 							     <c:set var="total"><json:data label="totalCount"/></c:set>
@@ -47,9 +52,9 @@
 							             </json:object>
 							         </json:array>
 							     <td>
-							     <jsp:include page="../graphs/singleHorizontalStackedBar.jsp">
+							     <jsp:include page="../graphs/singleHorizontalStackedBar.jsp" flush="true" >
 							         <jsp:param value="${completed},${total-completed}" name="csv"/>
-                                     <jsp:param value="${repo}_milestones" name="repo"/>
+                                     <jsp:param value="milestones${rowCount}" name="repo"/>
 							     </jsp:include>
 							     </td>
 							    </json:object>
@@ -63,14 +68,15 @@
                                          </json:object>
                                      </json:array>
                                     <td>
-                                 <jsp:include page="../graphs/singleHorizontalStackedBar.jsp">
+                                 <jsp:include page="../graphs/singleHorizontalStackedBar.jsp" flush="true" >
                                      <jsp:param value="${completed},${total-completed}" name="csv"/>
-                                     <jsp:param value="${repo}_issues" name="repo"/>
+                                     <jsp:param value="issues${rowCount}" name="repo"/>
                                  </jsp:include>
                                     </td></tr>
                                 </json:object>
 							</c:forEach>
 						  </json:object>
+						  <c:set var="rowCount" value="${rowCount + 1}"/>
 						</json:array>
                         </table>
 						</json:object>
