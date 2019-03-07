@@ -10,3 +10,7 @@ Current elements include
 * A display of all current projects and summary information pulled live from the GitHub V4 API using GraphQL
 * A display of all current projects and summary information extracted from the Google Drive API. These data are cached in a local database and accessed via GraphQL queries using PostGraphile
 * A *currently very slow* search interface for text harvested off the CTSA Consortium hub websites.  This is meant solely as a proof-of-concept for a tool to identify hubs using particular tools/services.  Try "TriNetX" as an example.
+
+### Dependencies
+
+* eichmann/JSONTagLib
