@@ -12,9 +12,13 @@
 WebContent/META-INF/MANIFEST.MF -text
 WebContent/WEB-INF/web.xml -text svneol=unset#application/xml
 WebContent/cd2h/dashboard.jsp -text
+WebContent/cd2h/dashboard_d3.jsp -text
+WebContent/cd2h/data.jsp -text
 WebContent/cd2h/project.jsp -text
 WebContent/cd2h/projects.jsp -text
 WebContent/footer.jsp -text
+WebContent/footer2.jsp -text
+WebContent/github/annotation.jsp -text
 WebContent/github/repos.jsp -text
 WebContent/graphs/data.csv -text
 WebContent/graphs/forceGraph.jsp -text
@@ -23,6 +27,7 @@ WebContent/graphs/singleHorizontalStackedBar.jsp -text
 WebContent/graphs/verticalBarChart.jsp -text
 WebContent/head.jsp -text
 WebContent/header.jsp -text
+WebContent/header2.jsp -text
 WebContent/images/bullet-l1.gif -text svneol=unset#image/gif
 WebContent/images/cd2h_honeycomb.png -text svneol=unset#image/png
 WebContent/images/cd2h_imgs/adam_wilcox.png -text

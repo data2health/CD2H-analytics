@@ -52,10 +52,17 @@
 							             </json:object>
 							         </json:array>
 							     <td>
+							     <c:choose>
+							     <c:when test="${empty param.bars}">
+							     	${completed} / ${total}
+							     </c:when>
+							     <c:otherwise>
 							     <jsp:include page="../graphs/singleHorizontalStackedBar.jsp" flush="true" >
 							         <jsp:param value="${completed},${total-completed}" name="csv"/>
                                      <jsp:param value="milestones${rowCount}" name="repo"/>
 							     </jsp:include>
+							     </c:otherwise>
+							     </c:choose>
 							     </td>
 							    </json:object>
                                 <json:object targetName="issues">
@@ -68,10 +75,17 @@
                                          </json:object>
                                      </json:array>
                                     <td>
+							     <c:choose>
+							     <c:when test="${empty param.bars}">
+							     	${completed} / ${total}
+							     </c:when>
+							     <c:otherwise>
                                  <jsp:include page="../graphs/singleHorizontalStackedBar.jsp" flush="true" >
                                      <jsp:param value="${completed},${total-completed}" name="csv"/>
                                      <jsp:param value="issues${rowCount}" name="repo"/>
                                  </jsp:include>
+							     </c:otherwise>
+							     </c:choose>
                                     </td></tr>
                                 </json:object>
 							</c:forEach>
