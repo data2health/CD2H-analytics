@@ -47,6 +47,14 @@ nav a:hover,
 <div id="main-nav" class="row no-gutters">
   	<div class="col-12 d-none d-lg-block">
   		<div id="header-logos"	class="row no-gutters   pt-3 pt-md-0 mt-2 mt-md-3 mb-4">
+                <div id="site-logo" class="d-inline-block float-left">
+                    <a href="http://labs.cd2h.org"><img width="321"
+                        height="112"
+                        src="../images/labs-logo.png"
+                        class="image wp-image-15  attachment-full size-full" alt=""
+                        style="max-width: 100%; height: auto;" 
+                        sizes="(max-width: 321px) 200vw, 641px"/></a>
+                </div>
 			<div class="pl-1 pl-md-0 col-9 col-md-8">
 				<div id="center">
 				<div id="site-logo" class="d-inline-block float-left">

@@ -12,7 +12,8 @@
 WebContent/META-INF/MANIFEST.MF -text
 WebContent/WEB-INF/web.xml -text svneol=unset#application/xml
 WebContent/cd2h/dashboard.jsp -text
-WebContent/cd2h/dashboard_d3.jsp -text
+WebContent/cd2h/dashboardDetail.jsp -text
+WebContent/cd2h/dashboard_orig.jsp -text
 WebContent/cd2h/data.jsp -text
 WebContent/cd2h/project.jsp -text
 WebContent/cd2h/projects.jsp -text
@@ -57,6 +58,7 @@ WebContent/images/cd2h_imgs/ted_laderas.png -text
 WebContent/images/cd2h_imgs/tim_bergquist.png -text
 WebContent/images/cd2h_invent.png -text
 WebContent/images/ctsa-g-logo.jpg -text svneol=unset#image/jpeg
+WebContent/images/labs-logo.png -text svneol=unset#image/png
 WebContent/images/masthead-divider.png -text svneol=unset#image/png
 WebContent/images/masthead-hhs-logo.png -text svneol=unset#image/png
 WebContent/images/masthead-nih-logo.png -text svneol=unset#image/png
