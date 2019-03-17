@@ -17,7 +17,7 @@
 	<jsp:include page="../header.jsp" flush="true" />
 
 	<div class="container pl-0 pr-0">
-		<br /> <br /> <br /> <br /> <br />
+		<br /> <br />
 		<div class="container-fluid">
 
 			<h1>CTSA Website Exploration</h1>

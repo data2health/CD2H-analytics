@@ -11,7 +11,7 @@
 	<jsp:param name="title" value="CD2H Project Dashboard" />
 </jsp:include>
 <style type="text/css" media="all">
-@import "../resources/layout2.css";
+@import "../resources/layout.css";
 
 table {
   border-collapse: collapse;
@@ -50,10 +50,10 @@ ul > li {
 <script src="//d3js.org/d3.v4.min.js" type="text/javascript"></script>
 
 <body class="home page-template-default page page-id-6 CD2H">
-	<jsp:include page="../header2.jsp" flush="true" />
+	<jsp:include page="../header.jsp" flush="true" />
 
 	<div class="container pl-0 pr-0">
-		<br /> 
+		<br /> <br/>
 		<div class="container-fluid">
 			<div style="width: 100%; float: left">
 				<h1>CD2H GitHub Dashboard</h1>
@@ -91,7 +91,7 @@ ul > li {
 
 			</div>
 			<div style="width: 100%; float: left">
-				<jsp:include page="../footer2.jsp" flush="true" />
+				<jsp:include page="../footer.jsp" flush="true" />
 			</div>
 		</div>
 	</div>

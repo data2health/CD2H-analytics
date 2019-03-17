@@ -1,5 +1,4 @@
 
-<footer class="container-fluid">
 	<ul id="menu-footer-menu"
 		class="flex-column flex-sm-row nav pt-4 pb-3 justify-content-center">
 		<li itemscope="itemscope"
@@ -28,7 +27,6 @@
 			itemtype="https://www.schema.org/SiteNavigationElement"
 			id="menu-item-997"
 			class="menu-item menu-item-type-custom menu-item-object-custom menu-item-997 nav-item"><a
-			title="CD2H Labs" href="https://ctsa.ncats.nih.gov/cd2h/cd2h-labs/"
+			title="CD2H Labs" href="http://labs.cd2h.org"
 			class="nav-link">CD2H Labs</a></li>
 	</ul>
-</footer>

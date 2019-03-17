@@ -18,7 +18,6 @@ WebContent/cd2h/data.jsp -text
 WebContent/cd2h/project.jsp -text
 WebContent/cd2h/projects.jsp -text
 WebContent/footer.jsp -text
-WebContent/footer2.jsp -text
 WebContent/github/annotation.jsp -text
 WebContent/github/repos.jsp -text
 WebContent/graphs/data.csv -text
@@ -28,7 +27,6 @@ WebContent/graphs/singleHorizontalStackedBar.jsp -text
 WebContent/graphs/verticalBarChart.jsp -text
 WebContent/head.jsp -text
 WebContent/header.jsp -text
-WebContent/header2.jsp -text
 WebContent/images/bullet-l1.gif -text svneol=unset#image/gif
 WebContent/images/cd2h_honeycomb.png -text svneol=unset#image/png
 WebContent/images/cd2h_imgs/adam_wilcox.png -text
@@ -59,6 +57,7 @@ WebContent/images/cd2h_imgs/tim_bergquist.png -text
 WebContent/images/cd2h_invent.png -text
 WebContent/images/ctsa-g-logo.jpg -text svneol=unset#image/jpeg
 WebContent/images/labs-logo.png -text svneol=unset#image/png
+WebContent/images/labslogo2.png -text svneol=unset#image/png
 WebContent/images/masthead-divider.png -text svneol=unset#image/png
 WebContent/images/masthead-hhs-logo.png -text svneol=unset#image/png
 WebContent/images/masthead-nih-logo.png -text svneol=unset#image/png
@@ -67,6 +66,7 @@ WebContent/images/person_icon.png -text
 WebContent/incite/browse.jsp -text
 WebContent/incite/termData.jsp -text
 WebContent/index.jsp -text
+WebContent/local_nav.jsp -text
 WebContent/proposals/data.jsp -text
 WebContent/proposals/display.jsp -text
 WebContent/proposals/merge.jsp -text
@@ -76,6 +76,7 @@ WebContent/resources/cd2h -text
 WebContent/resources/css -text
 WebContent/resources/d3.v3.min.js -text
 WebContent/resources/jdbc_environment.jsp -text
+WebContent/resources/layout(old).css -text
 WebContent/resources/layout.css -text
 WebContent/resources/slick.min.css -text
 WebContent/resources/style.css -text

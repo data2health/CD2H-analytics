@@ -10,7 +10,7 @@
 	<jsp:param name="title" value="CD2H Phase 2 Landscape" />
 </jsp:include>
 <style type="text/css" media="all">
-@import "../resources/layout2.css";
+@import "../resources/layout.css";
 </style>
 
 <body class="home page-template-default page page-id-6 CD2H">
@@ -19,8 +19,7 @@
 	<div class="container pl-0 pr-0">
 		<br /> <br /> 
 		<div class="container-fluid">
-<br>
-			<h2>CD2H Phase 2 Landscape</h2>
+			<h1>CD2H Phase 2 Landscape</h1>
 			<ul>
 				<li>Large blue icons are projects - mousing over shows the title and elevator pitch, double-clicking on them takes you to the proposal
 				<li>Photos are proposal leads - mouse over to see a name

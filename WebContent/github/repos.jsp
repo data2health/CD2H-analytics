@@ -20,7 +20,6 @@
     <div class="container pl-0 pr-0">
         <br /> <br /> 
         <div class="container-fluid">
-<br>
                 <div style="width: 100%; float: left">
         <c:choose>
         <c:when test="${param.mode == 'org'}">
