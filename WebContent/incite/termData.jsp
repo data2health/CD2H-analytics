@@ -7,9 +7,9 @@
 
 <sql:query var="domains" dataSource="jdbc/incite">
     select domain,count(*) from (
-                    select institution.domain,sentence,count(*)
+                    select institution.domain,seqnum,count(*)
                     from extraction.sentence,jsoup.document,jsoup.institution
-                    where sentence.id=document.id and document.did=institution.did and sentence~?
+                    where sentence.id=document.id and document.did=institution.did and tsv @@ plainto_tsquery(?)
                     group by 1,2
     ) as foo group by domain order by domain;
     <sql:param>${param.term}</sql:param>
