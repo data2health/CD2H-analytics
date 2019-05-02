@@ -96,5 +96,15 @@
         	<artifactId>JSONTagLib</artifactId>
         	<version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+        	<groupId>CD2HTagLib</groupId>
+        	<artifactId>CD2HTagLib</artifactId>
+        	<version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+        	<groupId>CD2H-drive</groupId>
+        	<artifactId>CD2H-drive</artifactId>
+        	<version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

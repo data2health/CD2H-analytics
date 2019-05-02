@@ -84,4 +84,5 @@ WebContent/resources/layout.css -text
 WebContent/resources/slick.min.css -text
 WebContent/resources/style.css -text
 WebContent/resources/styles.css -text
+WebContent/rppr/rppr.jsp -text
 /pom.xml -text

@@ -91,7 +91,7 @@
             <h1>CD2H GitHub Repositories</h1>
             <p>These are repositories flagged with "data2health" as a topic. (<a href="repos.jsp?mode=org">switch to organization view</a>)</p>
             <json:setAPI API="GitHub">
-                <json:object queryName="data2health_tagged_repos" targetName="search">
+                <json:object queryName="repoByTopic" targetName="search">
                     Repository Count: <json:data label="repositoryCount"/>
                     <hr>
                     <json:array label="edges">
