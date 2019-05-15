@@ -56,7 +56,6 @@ h4{
 	font-weight: 500;
 	font-size:13pt;
 	color:#184c7a;
-    text-decoration: underline;
 }
 
 h5{
