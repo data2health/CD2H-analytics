@@ -143,7 +143,7 @@ hr{
             <a name="resource_discovery"/>
             <cd2h:RPPRasHTML coreName="resource-discovery"/>
             <a name="cloud"/>
-            <cd2h:RPPRasHTML coreName="software-cloud-infrastructure"/>
+            <cd2h:RPPRasHTML coreName="tools-cloud-infrastructure"/>
          
         </div>
         <jsp:include page="../footer.jsp" flush="true" />
