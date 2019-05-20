@@ -28,7 +28,7 @@
 					   <p><b>GitHub Description:</b> <json:data label="description"/></p>
 					   <p><b>GitHub Repository Last Modified At:</b> <json:data label="pushedAt"/></p>
 					   <sql:query var="project" dataSource="jdbc/loki">
-					       select * from google.project,dashboard.dashboard where title=updated_title and repo_name=?;
+					       select project.project_id,description from google.project,dashboard.dashboard where title=updated_title and repo_name=?;
 					       <sql:param>${param.repo}</sql:param>
 					   </sql:query>
 					   <c:forEach items="${project.rows}" var="row" varStatus="rowCounter">
@@ -38,8 +38,8 @@
 					       <table>
 					       <tr><th>Name</th><th>GitHub Handle</th><th>Site</th></tr>
 					       <sql:query var="person" dataSource="jdbc/loki">
-					           select * from google.role natural join google.person where id=?::int and role='Lead' order by last_name,preferred_first_name;
-					           <sql:param>${row.id}</sql:param>
+					           select * from google.role natural join google.person where project_id=?::int and role='Lead' order by last_name,preferred_first_name;
+					           <sql:param>${row.project_id}</sql:param>
 					       </sql:query>
 					       <c:forEach items="${person.rows}" var="subrow" varStatus="subrowCounter">
 					           <tr><td>${subrow.preferred_first_name} ${subrow.last_name}</td><td><a href="${subrow.github_handle_url}">${subrow.github_handle_url}</a></td><td>${subrow.institution}</td></tr>
@@ -50,8 +50,8 @@
                            <table>
                            <tr><th>Name</th><th>GitHub Handle</th><th>Site</th></tr>
                            <sql:query var="person" dataSource="jdbc/loki">
-                               select * from google.role natural join google.person where id=?::int and role='Contributor' order by last_name,preferred_first_name;
-                               <sql:param>${row.id}</sql:param>
+                               select * from google.role natural join google.person where project_id=?::int and role='Contributor' order by last_name,preferred_first_name;
+                               <sql:param>${row.project_id}</sql:param>
                            </sql:query>
                            <c:forEach items="${person.rows}" var="subrow" varStatus="subrowCounter">
                                <tr><td>${subrow.preferred_first_name} ${subrow.last_name}</td><td><a href="${subrow.github_handle_url}">${subrow.github_handle_url}</a></td><td>${subrow.institution}</td></tr>
@@ -64,8 +64,8 @@
                            <table>
                            <tr><th>Name</th><th>GitHub Handle</th><th>Site</th></tr>
                            <sql:query var="person" dataSource="jdbc/loki">
-                               select * from google.role natural join google.person where id=?::int and role='Mailing list only' order by last_name,preferred_first_name;
-                               <sql:param>${row.id}</sql:param>
+                               select * from google.role natural join google.person where project_id=?::int and role='Mailing list only' order by last_name,preferred_first_name;
+                               <sql:param>${row.project_id}</sql:param>
                            </sql:query>
                            <c:forEach items="${person.rows}" var="subrow" varStatus="subrowCounter">
                                <tr><td>${subrow.preferred_first_name} ${subrow.last_name}</td><td><a href="${subrow.github_handle_url}">${subrow.github_handle_url}</a></td><td>${subrow.institution}</td></tr>
