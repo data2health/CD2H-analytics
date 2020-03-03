@@ -5,7 +5,14 @@
 <%@ taglib prefix="json" uri="http://labs.cd2h.org/JSONTagLib"%>
 
 <style type="text/css" media="all">
-@import "../resources/layout.css";
+body {
+    font-size: 84%;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+}
 
 table {
   border-collapse: collapse;
@@ -16,12 +23,16 @@ table, th, td {
 }
 
 tbody th {
+    font-size: 84%;
+    font-family: Arial,Helvetica,sans-serif;
 	text-align: center;
 	font-size: 15px;
 	padding: 5px;
 }
 
 thead td {
+    font-size: 84%;
+    font-family: Arial,Helvetica,sans-serif;
 	cursor: s-resize;
 	font-size: 15pt;
 	font-weight: bold;
@@ -30,6 +41,8 @@ thead td {
 }
 
 tbody td {
+    font-size: 84%;
+    font-family: Arial,Helvetica,sans-serif;
 	font-size: 11pt;
 	max-width: 570px;
 	padding: 5px;
@@ -41,6 +54,7 @@ ul > li {
 }
 </style>
 
+<html>
 			<div style="width: 100%; float: left">
 				<table>
 					<thead>
@@ -59,3 +73,4 @@ ul > li {
 			</div>
 
 <jsp:include page="dashboardContent.jsp" flush="true" />
+</html>
