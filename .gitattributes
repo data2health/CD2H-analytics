@@ -19,11 +19,14 @@ WebContent/cd2h/data.jsp -text
 WebContent/cd2h/embedded_dashboard.jsp -text
 WebContent/cd2h/project.jsp -text
 WebContent/cd2h/projects.jsp -text
+WebContent/community/slack-network-data.jsp -text
+WebContent/community/slack-network.jsp -text
 WebContent/footer.jsp -text
 WebContent/github/annotation.jsp -text
 WebContent/github/repos.jsp -text
 WebContent/graphs/data.csv -text
 WebContent/graphs/forceGraph.jsp -text
+WebContent/graphs/forceGraphN3C.jsp -text
 WebContent/graphs/forcePhoto.jsp -text
 WebContent/graphs/singleHorizontalStackedBar.jsp -text
 WebContent/graphs/verticalBarChart.jsp -text

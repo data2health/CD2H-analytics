@@ -28,7 +28,7 @@ var width = parseInt(d3.select("#content").style("width"))-50,
 	linkDistance = ${param.ld};
 </c:if>
 
-var color = d3.scale.category10().domain(d3.range(0,9));
+var color = d3.scale.category10().domain(d3.range(0,5));
 
 var force = d3.layout.force()
     .charge(charge)
@@ -72,8 +72,8 @@ d3.select(window).on('resize', function() {
     .attr("class", "node")
     .attr("d", d3.svg.symbol()
             .size(function(d) {return rScale(d.score);})
-        .type(function(d) { return d3.svg.symbolTypes[d.group/10>>0]; }))
-    .style("fill", function(d) { return color(d.group % 10); })
+        .type(function(d) { if (d.group >  4) return d3.symbolCircle; else return d3.symbolSquare; }))
+    .style("fill", function(d) { return color(d.group); })
 	.on("dblclick", function(d) { window.open(d.url,"_self");})
     .on("mouseover", fade(.2))
     .on("mouseout", fade(1))
@@ -126,11 +126,13 @@ function updateData() {
 	force.start(); }
 
 function updateStyle(d) {
-	  return color(d.group % 10);	
+	  return color(d.group % 4);	
 }
 
 function updateType(d) {
-	return d3.svg.symbolTypes[d.group/10>>0];
+	if  (d.group  <  4)
+		return  d3.svg.symbolTypes[0];
+	return d3.svg.symbolTypes[3];
 }
 
 
